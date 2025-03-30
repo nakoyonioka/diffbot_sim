@@ -334,24 +334,6 @@
     </sensor>
   </gazebo>
 
-  <joint name="spray_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="spray_link" />
-    <origin xyz="0.1 -0.04 0.03" rpy="0 0 0"/>
-  </joint>
-
-  <link name="spray_link">
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.005 0.005 0.005"/>
-      </geometry>
-      <material name="red">
-        <color rgba="1 0 0 1"/>
-      </material>
-    </visual>
-  </link>
-
   <ros2_control name="GazeboSystem" type="system">
     <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
